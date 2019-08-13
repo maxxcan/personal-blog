@@ -1,0 +1,18 @@
+#+TITLE:       Haciendo mudanzas en el Blog
+#+AUTHOR:      Patricio Martínez
+#+EMAIL:       maxxcan@disroot.org
+#+DATE:        2019-08-13 mar
+#+URI:         /blog/%y/%m/%d/haciendo-mudanzas-en-el-blog
+#+KEYWORDS:    blog, emacs, wordpress
+#+TAGS:        blog, emacs, wordpress
+#+LANGUAGE:    es
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: Mudando de Wordpress a Org-page con Emacs
+
+* Introducción
+
+* Problemas con Wordpress
+
+* Emacs al rescate
+
+* Agradecimientos
