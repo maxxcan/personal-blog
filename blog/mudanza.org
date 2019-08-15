@@ -11,8 +11,28 @@
 
 * Introducción
 
+Saludos a todos los que leéis mi blog que son dos personas como mucho y muy agradecido que estoy. Como podemos apreciar he decidido llevar algunos cambios en mi blog sobre todo en el sistema con el que creo los post y manejo el blog. He pasado de *Wordpress* a una herramienta mucho más sencilla pero a la vez más práctica y elegante, por supuesto hablo de *Emacs* y un paquete llamado *Org-page*, pero no nos adelantemos y expliquemos las cosas más detalladamente. 
+
+
 * Problemas con Wordpress
+
+Llevo mucho tiempo manejando y creando páginas con *Wordpress* con lo que en un inicio fue una *herramienta perfecta* para mis propósitos de manejar mi propio blog, de hecho cuando yo empecé a usar Wordpress se autopromocionaba como el mejor gestor de contenidos para crear un blog. 
+
+Pero la herramienta evolucionó y se le fueron añadiendo mejoras y nuevos añadidos haciendo que esta evolucionara en utilidades pero también en *complejidad* hasta el punto de pasar de un gestor de contenidos para llevar un blog a una gestor bastante complejo que te permite desde hacer una página web al uso, manejar un conjunto de blogs o incluso crear tiendas virtuales y otras web app muy usadas últimamente.
+
+Una vez leí en un libro de informática que toda herramienta evoluciona desde solucionar un problema hasta ser capaz de mandar correos electrónicos. Esto es claramente una broma pero ejemplifica como muchas herramientas comienzan con un objetivo concreto pero luego se le van añadiendo nuevas funcionalidades hasta a veces llegar incluso a incluir algunas que no son para nada necesarias. Algo así le ha pasado a Wordpress y también a otros gestores de contenidos como Joomla, Drupal, etc. Es por este motivo que ahora están proliferando muchos *generadores de páginas estáticas* que intentan volver a la simplicidad de antes y para solucionar un solo problema como es una página personal con una serie de entradas o post. 
+
+En definitiva eso me ha pasado a mí con Wordpress que ya pasaba más tiempo preocupándome de las *actualizaciones* del gestor o de sus muchos plugins que de escribir mis post. Esto me hizo volverme a los generadores de páginas estáticas como [[https://jekyllrb.com/][jekyll]], [[https://gohugo.io/][hugo]], [[http://cryogenweb.org/][cryogen]] o [[https://www.staticgen.com/coleslaw][coleslaw]]. El asunto es que me gustan mucho, los he probado y algunos incluso tienen modos para mi maravilloso *Emacs* como jekyll o hugo pero al final no me decidí por ninguno de ellos. 
+
 
 * Emacs al rescate
 
+Pues sí, al final como ya muchos os imagináis ha sido un paquete de /Emacs/ llamado [[https://github.com/sillykelvin/org-page][org-page]] el que se ha llevado el gato al agua. Al principio me costó un poco la decisión ya que el proyecto a día de hoy está desatendido por su creador, pero al ser software libre siempre hay la posibilidad de mejorar o arreglar lo que de problemas y/o crear un *fork del proyecto*. 
+
+En todo caso es un generador de contenido estático que funciona perfectamente, es *ligero y fácil de configurar* y genera un código limpio y *fácil de mantener*, permite usar git aunque yo uso ftp para pasar el contenido de mi repositorio local al servidor donde tengo alojado el blog y lo mejor es que permite también mucha *personalización* si uno quiere. 
+
+Ahora solo me queda ir migrando mis antiguos post a este sistema e ir subiéndolos poco a poco y lo mejor de todo es que solo me tendré que preocupar de escribir y tanto del mantenimiento de mi blog.
+
 * Agradecimientos
+
+Por supuesto a quien quiero *agradecer*, ya que fue la persona que me inspiró a hacer la migración, a [[https://notxor.nueva-actitud.org/][Noxtor]], además gracias a sus artículos sobre Org-page, al mismo tiempo que sus consejos a través del canal de *IRC de emacs-es*, he conseguido realizar el paso. 
