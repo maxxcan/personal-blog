@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Introducción a Emacs (2ª Parte) - Blog Personal de Maxxcan</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Patricio Martínez" />
+    <meta name="description" content="Esta es la segunda parte de la introducción a Emacs" />
+    <meta name="keywords" content="emacs" />
+    <link rel="stylesheet" href="/media/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/media/css/prettify.css" type="text/css">
+  </head>
+  <body class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="/">Blog Personal de Maxxcan</a></h1>
+        <p>Blog sobre tecnología y diseño</p>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/tags/">Tags</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://www.github.com/maxxcan">GitHub</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="//www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="www.maxxcan.com">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1>Introducción a Emacs (2ª Parte)</h1>
+
+
+<div id="outline-container-org2dc3f7d" class="outline-2">
+<h2 id="org2dc3f7d">Introducción</h2>
+<div class="outline-text-2" id="text-org2dc3f7d">
+<p>
+Seguimos tras la primera parte para intentar acercar <i>Emacs</i> a todos los usuarios posibles. Como ya dejamos claro al principio <i>Emacs</i> es algo complicado al principio ya que es algo distinto a los editores actuales, pero una vez que uno se acostumbra las cosas cambian mucho. Además al final de esta entrada explicaré un pequeño truco para poder poner la combinación de teclas que queramos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org85a9fa4" class="outline-2">
+<h2 id="org85a9fa4">Más combinaciones de teclas</h2>
+<div class="outline-text-2" id="text-org85a9fa4">
+</div>
+<div id="outline-container-orgaeece2e" class="outline-3">
+<h3 id="orgaeece2e">Resumen de la entrada anterior</h3>
+<div class="outline-text-3" id="text-orgaeece2e">
+<p>
+Vamos a repasar las combinaciones de teclas más importantes de la <b>entrada anterior</b>:
+</p>
+
+<ol class="org-ol">
+<li><b>(Ctrl+x) + (Ctrl+f)</b> --&gt; <b>Abrir</b> un archivo o <b>crearlo</b> si éste no existe previamente.</li>
+<li><b>(Ctrl+x) + (Ctrl+s)</b> --&gt; Salvar el buffer al archivo o <b>guardar</b>, como ustedes quieran.</li>
+<li><b>(Ctrl+x) + (Ctrl+w)</b> --&gt; Salvar el buffer con otro nombre de archivo o <b>guardar como</b> como gusten.</li>
+<li><b>(Ctrl+x) + k</b> --&gt; Para <b>cerrar</b> o matar (kill) el <b>buffer</b> actual.</li>
+<li><b>(Ctrl+x) + (Ctrl+c)</b> --&gt; <b>Cerrar Emacs</b></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org304c42d" class="outline-3">
+<h3 id="org304c42d">Navegando por el documento</h3>
+<div class="outline-text-3" id="text-org304c42d">
+<p>
+Emacs también tiene combinaciones de teclas para mover nuestro cursor por el documento. Esto es así porque como vimos con la entrada anterior los teclados antiguos no tenían teclas tan básicas ahora como <b>Avanzar Página</b>, <b>Retroceder Página</b> o los <b>cursores</b>. Así que para mover el cursor hacia delante o detrás o avanzar párrafos hay combinaciones de teclas pero no las voy a decir ya que con los cursores vamos bien, eso lo dejaremos para otra  
+</p>
+
+<ol class="org-ol">
+<li><b>Ctrl+a</b> --&gt; Lleva el cursor al <b>inicio de la línea</b> en la que se encuentre.</li>
+<li><b>Ctrl+e</b> --&gt; Lleva el cursor al <b>final de la línea</b> en la que se encuentre.</li>
+<li><b>Alt+&lt;</b> --&gt; Lleva el cursor al <b>inicio del buffer</b>.</li>
+<li><b>Alt+&gt;</b> --&gt; Lleva el cursor al <b>final del buffer</b>.</li>
+<li><b>(Alt+g)+g</b> --&gt; Ir a la <b>línea del documento</b> indicada.</li>
+<li><b>(Ctrl+x)+h --&gt; *Seleccionar todo</b></li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org4d27998" class="outline-3">
+<h3 id="org4d27998">Borrando cosas en el documento</h3>
+<div class="outline-text-3" id="text-org4d27998">
+<ol class="org-ol">
+<li><b>Alt+d</b> --&gt; <b>Borra una palabra</b> a partir de donde se encuentre el cursor.</li>
+<li><b>Ctrl+k</b> --&gt; <b>Borra la línea</b> a partir de donde se encuentre el cursor.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org19a66ce" class="outline-3">
+<h3 id="org19a66ce">Trabajando con buffers</h3>
+<div class="outline-text-3" id="text-org19a66ce">
+<ol class="org-ol">
+<li><b>(Ctrl+x) + k</b> --&gt; <b>Cierra el buffer</b> en el que estamos</li>
+<li><b>(Ctrl+x) + b</b> --&gt; Cambiar al buffer que escribamos en el mini-buffer, si directamente le damos a <b>Enter</b> iremos al buffer <b>anterior</b>.</li>
+<li><b>(Ctrl+x) + (Ctrl+b)</b> --&gt; Nos muestra en otra ventana una lista con los buffers que hay abiertos. Se sale de ahí con <b>q</b></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org7b4269e" class="outline-3">
+<h3 id="org7b4269e">Cortando y pegando</h3>
+<div class="outline-text-3" id="text-org7b4269e">
+<ol class="org-ol">
+<li><b>Ctrl+SPC</b> --&gt; Selección de texto. La selección del texto en Emacs es distinta a otros editores pero realmente es más cómoda. Inicialmente pulsamos Ctrl+SPC entonces moveremos el cursor y por donde vaya el cursor se irá seleccionando. Tal como vemos abajo, para cancelar la selección se hace con ....  Una vez que tenemos nuestra selección pulsaremos la combinación de teclas para <b>Cortar</b> o <b>Copiar</b></li>
+
+<li><b>Ctrl+w</b> --&gt; Cortar</li>
+<li><b>Alt+w</b> --&gt; Copiar</li>
+<li><b>Ctrl+y</b> --&gt; Pegar (la y viene de yank en inglés)</li>
+</ol>
+
+<p>
+Para que el Cortar/Copiar/Pegar sea como en otros editores podemos usar el <i>cua-mode</i> que ya veremos más adelante.
+</p>
+
+<p>
+Si nos equivocamos podemos <b>Deshacer</b> lo que hayamos hecho con <b>Ctrl+/</b> o <b>Ctrl+_</b>
+  También hay un truco para cambiar el <b>Deshacer</b> por <b>Ctrl+z</b> más común en otros editores pero que veremos al final de esta entrada.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8760f29" class="outline-3">
+<h3 id="org8760f29">Buscando y reemplazando</h3>
+<div class="outline-text-3" id="text-org8760f29">
+<ol class="org-ol">
+<li><b>Ctrl+s</b> --&gt; Búsqueda hacia abajo. Pulsamos esa combinación, introducimos la palabra a buscar y vamos pulsando de nuevo la combinación, lo que nos llevará hacia abajo del documento. Si pulsamos <b>Ctrl+g</b> saldremos de la búsqueda.</li>
+<li><b>Ctrl+r</b> --&gt; Lo mismo pero recorreremos el documento hacia arriba con respecto a la posición de nuestro cursor.</li>
+<li><b>Alt+%</b> --&gt; Pulsamos y nos pregunta la palabra a buscar y con qué reemplazarla y hará una búsqueda y reemplazo hacia abajo del documento respecto a la posición de nuestro cursor.</li>
+<li><b>Alt+Ctrl+%</b> --&gt; Igual que le anterior pero solo que la búsqueda y reemplazo se hará hacia arriba del documento con respecto a la posición de nuestro cursor.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge227e61" class="outline-3">
+<h3 id="orge227e61">Deshacer y Rehacer</h3>
+<div class="outline-text-3" id="text-orge227e61">
+<p>
+La <b>combinación de teclas</b> es la siguiente:
+</p>
+
+<ol class="org-ol">
+<li><b>Deshacer</b> --&gt; <b>Ctrl+/</b> o <b>Ctrl+_</b></li>
+<li><b>Rehacer</b> --&gt; <b>Ctrl+?</b> o <b>Alt+_</b>-</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7a64905" class="outline-2">
+<h2 id="org7a64905">Chuleta con el resumen de las teclas de <i>Emacs</i></h2>
+<div class="outline-text-2" id="text-org7a64905">
+<p>
+Aquí os dejo una pequeña chuleta o resumen de las teclas más importantes que hemos visto.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad4e3ff" class="outline-2">
+<h2 id="orgad4e3ff">Como aprender las combinaciones de teclas de <i>Emacs</i></h2>
+<div class="outline-text-2" id="text-orgad4e3ff">
+<p>
+Pues como ya he dicho no es necesario aprenderse todas las combinaciones de teclas de golpe, eso es algo tedioso y aburrido. Lo mejor es ir usando el programa e ir usando las combinaciones poco a poco hasta que las vayamos interiorizando y después ya no podremos sacarlas de nosotros. Seremos uno con el teclado y el teclado uno con nosotros y será completamente automático. 
+</p>
+
+<p>
+Los pasos a seguir podrían ser:
+</p>
+
+<ol class="org-ol">
+<li>Usar en un principio los iconos y el menú de la aplicación. Lo bueno de esto es que en el menú por ejemplo, al lado del comando te indica la combinación de teclas que podrás ir aprendiendo poco a poco o consultarlo para cuando se te olvida alguna.</li>
+<li>Una vez podemos ir soltando el ratón y con la tecla <b>F10</b> activaremos el menú y con los cursores podremos ir al comando que necesitemos.</li>
+<li>Ir viendo poco a poco la ayuda y los manuales para terminar de ir aprendiendo las combinaciones de teclas que necesitamos</li>
+</ol>
+
+<p>
+Os diré por experiencia propia que simplemente con los dos primeros puntos me ha sido suficiente para ir aprendiendo todas las combinaciones de teclas que sé y de una forma muy automática.
+</p>
+
+<p>
+Aquí además os dejo una chuleta que ha realizado mi admirada y gran usuaria de Emacs <a href="http://sachachua.com/blog/">Sacha Chua</a>. 
+</p>
+
+<p>
+%imagen%
+</p>
+
+<p>
+Tiene muchos más <a href="http://sachachua.com/blog/sketched-books/">aquí</a> y os recomiendo que le echéis un ojo porque son todos geniales.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org053340c" class="outline-2">
+<h2 id="org053340c">Los modos, la aparición de las nuevas combinaciones de teclas y algunas reglas mnemotécnicamente</h2>
+<div class="outline-text-2" id="text-org053340c">
+<p>
+Aunque de esto ya hablaremos más detalladamente a <i>Emacs</i> se le pueden instalar los llamados <b>Modos</b>. Los <b>Modos</b> en resumen son unos paquetes que les da una serie de <b>características</b> al programa que no tiene en origen. Hay modos para <b>leer el correo</b>, conectarse a una red mediante XMPP y los más utilizados modos para la <b>sintaxis</b> de un determinado lenguaje, coloreado, auto-completado, etc, etc. 
+</p>
+
+<p>
+Como hemos visto para la mayoría de las funciones que hemos visto que son generales a Emacs se comienza con la combinación <b>Ctrl-x</b> o incluso <b>Alt-x</b>. La <b>X</b> viene de la palabra en inglés <b>execute</b> y significa eso, que ejecuta algo. 
+</p>
+
+<p>
+En cambio, con los modos aparecen <b>combinaciones de teclas</b> que empiezan en cambio con <b>Ctrl+c</b>. Esto no es siempre así pero ocurre mayoritariamente y aunque no es un dogma no ayuda mnemotécnicamente a diferenciar los comandos más generales de <i>Emacs</i> y los comandos concretos de los distintos <b>Modos</b>. Por ejemplo, también podemos observar que todos las combinaciones de teclas de comandos de <b>ayuda</b> comienzan con <b>Ctrl+h</b> del inglés <b>Help</b>.
+</p>
+
+<p>
+Veremos más adelante más de estas <b>reglas mnemotécnicas</b>. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org431c7bf" class="outline-2">
+<h2 id="org431c7bf">Como cambiar las combinaciones de teclas</h2>
+<div class="outline-text-2" id="text-org431c7bf">
+<p>
+Y bueno, para finalizar diré que es interesante saber que aunque lo útil es saber las combinaciones de teclas que trae emacs por defecto, que sepamos que siempre podemos cambiarlas y poner las nuestras propias. 
+</p>
+
+<p>
+Todo esto se hace en el fichero de configuración de <i>Emacs</i> que es el <b>.emacs</b>, que según que el sistema sea <b>Windows, Linux o Mac</b> estará en un lugar distinto. Pues en ese fichero podemos añadir la configuración para cambiar las combinaciones de teclas, o en el caso concreto de <b>Cortar/Copiar/Pegar/</b> cambiarlo a las teclas <b>Ctrl+c</b>, <b>Ctrl+x</b> y <b>Ctrl+v</b> con el <b>cua-mode</b> que como podéis observar es un modo de <i>Emacs</i> que añade nuevas combinaciones de teclas.
+</p>
+
+<p>
+Para agregar el <b>cua-mode</b> hay que instalarlo con el gestor de paquetes de <i>Emacs</i> y luego en el fichero de configuración <b>.emacs</b> añadir la línea:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">
+(require 'cua-mode)
+
+</pre>
+</div>
+
+<p>
+Hablaremos más del <b>gestor de paquetes</b> de <i>Emacs</i> en un futuro artículo.
+</p>
+
+<p>
+También podemos añadir nuestra propia combinación de teclas. Por ejemplo vamos a mejorar como ejemplo la experiencia de Deshacer/Rehacer al estilo Windows$. 
+</p>
+
+<p>
+Como ya hemos visto para <b>Deshacer</b> y <b>Rehacer</b> las teclas en <i>Emacs</i> son <b>Ctrl+/</b> ó <b>Ctrl+_</b> para deshacer y <b>Ctrl+?</b> o <b>Alt+_</b> para rehacer.
+</p>
+
+<p>
+Así que vamos a reconfigurarlas para que esto mismo se haga con la combinación de teclas <b>Ctrl+z</b> y <b>Ctrl+y</b> al igual que en Windows$.  
+</p>
+
+<p>
+Para ello añadiremos en nuestro fichero de configuración las siguientes líneas:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">
+(global-set-key (kbd "C-z") 'undo)   
+
+(global-set-key (kbd "C-y") 'redo)
+
+</pre>
+</div>
+
+<p>
+En un <b>futuro artículo</b> hablaremos más en profundidad del modo <b>undo-tree-mode</b>, que es un modo muy interesante y visual que mejora muchísimo nuestra experiencia en el <b>Deshacer/Rehacer</b>.  
+</p>
+</div>
+</div>
+
+</div>
+</div>
+    <div>
+      <div class="post-meta">
+        <span title="post date" class="post-info">2019-08-16</span>
+        <span title="last modification date" class="post-info">2019-08-16</span>
+        <span title="tags" class="post-info"><a href="/tags/emacs/">emacs</a></span>
+        <span title="author" class="post-info">Patricio Martínez</span>
+      </div>
+      <section>
+        <h1>Comments</h1>
+      </section>
+      <script src="//code.jquery.com/jquery-latest.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="/media/js/main.js"></script>
+      <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 27.x (<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+          Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:maxxcan &lt;at&gt; disroot &lt;dot&gt; org">Patricio Martínez</a>
+          &nbsp;&nbsp;-&nbsp;&nbsp;
+          Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">org-page</a>
+          <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>

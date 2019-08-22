@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Introducción a Emacs (3ª Parte) - Blog Personal de Maxxcan</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Patricio Martínez" />
+    <meta name="description" content="Ultima parte sobre la introducción a Emacs" />
+    <meta name="keywords" content="emacs" />
+    <link rel="stylesheet" href="/media/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/media/css/prettify.css" type="text/css">
+  </head>
+  <body class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="/">Blog Personal de Maxxcan</a></h1>
+        <p>Blog sobre tecnología y diseño</p>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/tags/">Tags</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://www.github.com/maxxcan">GitHub</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="//www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="www.maxxcan.com">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1>Introducción a Emacs (3ª Parte)</h1>
+
+
+<div id="outline-container-org1a83ade" class="outline-2">
+<h2 id="org1a83ade">Introducción</h2>
+<div class="outline-text-2" id="text-org1a83ade">
+<p>
+Seguimos con la última parte de nuestra introducción a Emacs con algunos pequeños apuntes de cosas que hacer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org61adde7" class="outline-2">
+<h2 id="org61adde7">Poniendo temas y cambiando los colores y algunas mejoras en el aspecto</h2>
+<div class="outline-text-2" id="text-org61adde7">
+<p>
+Existen para Emacs gran cantidad de temas que podemos instalar y configurar así como hacer los nuestros propios.
+</p>
+
+<p>
+En estas dos páginas nos muestran los temas que hay para Emacs:
+</p>
+
+<p>
+<a href="https://emacsthemes.com/">Emacs Themes</a>
+</p>
+
+<p>
+<a href="https://pawelbx.github.io/emacs-theme-gallery/">Emacs theme Gallery</a>
+</p>
+
+
+<p>
+Además tenemos páginas varias de temas en concreto. Pondré a continuación algunos ejemplos pero ya realizaremos un post en concreto sobre como embellecer nuestro Macis.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/owainlewis/emacs-color-themes">Paquete de colores de Emacs</a></li>
+<li><a href="https://github.com/sjrmanning/noctilux-theme">Noctilux</a></li>
+<li><a href="https://github.com/owainlewis/emacs-color-themes">Más temas de Emacs</a></li>
+<li><a href="https://draculatheme.com/emacs/">Dracula para Emacs</a></li>
+</ul>
+
+<p>
+En todos ellos explican como instalarlos y como activarlos, aunque ya digo que haremos un post donde lo explicaremos mejor y además contaremos el cómo crear nuestro propio tema. 
+</p>
+
+
+<p>
+También podemos hacer algunos cambios estéticos más en nuestro editor preferido. 
+</p>
+
+<p>
+Algunos de ellos son ocultar la barra de herramientas o incluso la de los menús, esto le da un aspecto más elegante.
+</p>
+
+<p>
+Para hacer esto añadiremos en nuestro fichero de configuración los siguiente:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org580f811" class="outline-2">
+<h2 id="org580f811">Mirar documentación en inglés y español</h2>
+<div class="outline-text-2" id="text-org580f811">
+<p>
+Hay mucha documentación de Emacs, tanto en la página de su proyecto como en su wiki. Ambos tienen versión en varios idiomas en los que por supuesto está el español. 
+</p>
+
+<p>
+Se pueden encontrar en:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.gnu.org/software/emacs/">Página de Emacs </a>y su <a href="http://www.nongnu.org/emacs-man-es/#SEC_Top">manual</a></li>
+
+<li><a href="https://www.emacswiki.org/emacs/MapaDelSitio">En el wiki</a>.</li>
+</ul>
+
+<p>
+En el wiki además tenemos información hacia otras páginas, acceso al IRC de emacs en español y algunas páginas personales muy muy interesantes.
+</p>
+
+<p>
+La conocida página <b>Reddit</b> tiene una sección solo para Emacs. <a href="https://www.reddit.com/r/emacs/">Emacs en Reddit</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga987285" class="outline-2">
+<h2 id="orga987285">Mirar y/o probar la configuración de otras personas</h2>
+<div class="outline-text-2" id="text-orga987285">
+<p>
+Otra forma en la que se aprende mucho, pero hay que tener ya algo de experiencia en el uso y la configuración de Emacs, es viendo la configuración de otras personas. 
+</p>
+
+<p>
+Por toda la red en páginas como <b>github</b>
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-org94d0de0" class="outline-2">
+<h2 id="org94d0de0">Visitar nuestro canal de IRC y nuestro Planet</h2>
+<div class="outline-text-2" id="text-org94d0de0">
+<p>
+Digan lo que digan el protocolo IRC sigue siendo el mejor para mantener a un grupo en contacto. Y esto es porque es un protocolo libre, abierto, muy conocido y muy fácil de implementar. Por eso hay gran cantidad de clientes de irc tanto en modo texto como en modo gráfico y por supuesto para Emacs tenemos el <b>erc</b> que viene instalado por defecto. 
+</p>
+
+<p>
+Y existe tanto canal de irc en <b>español</b> y en inglés. El servidor de acceso es <a href="https://freenode.net">freenode</a> y los canales son o #emacs para la versión inglesa y #emacs-es si quieres español.
+</p>
+
+<p>
+También puedes visitar nuestro <a href="http://planet.emacs-es.org">planet</a> donde encontrarás gran cantidad de artículos sobre Emacs en <b>español</b>.
+</p>
+</div>
+</div>
+
+</div>
+</div>
+    <div>
+      <div class="post-meta">
+        <span title="post date" class="post-info">2019-08-16</span>
+        <span title="last modification date" class="post-info">2019-08-16</span>
+        <span title="tags" class="post-info"><a href="/tags/emacs/">emacs</a></span>
+        <span title="author" class="post-info">Patricio Martínez</span>
+      </div>
+      <section>
+        <h1>Comments</h1>
+      </section>
+      <script src="//code.jquery.com/jquery-latest.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="/media/js/main.js"></script>
+      <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 27.x (<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+          Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:maxxcan &lt;at&gt; disroot &lt;dot&gt; org">Patricio Martínez</a>
+          &nbsp;&nbsp;-&nbsp;&nbsp;
+          Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">org-page</a>
+          <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
