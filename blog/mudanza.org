@@ -35,4 +35,4 @@ Ahora solo me queda ir migrando mis antiguos post a este sistema e ir subiéndol
 
 * Agradecimientos
 
-Por supuesto a quien quiero *agradecer*, ya que fue la persona que me inspiró a hacer la migración, a [[https://notxor.nueva-actitud.org/][Noxtor]], además gracias a sus artículos sobre Org-page, al mismo tiempo que sus consejos a través del canal de *IRC de emacs-es*, he conseguido realizar el paso. 
+Por supuesto a quien quiero *agradecer*, ya que fue la persona que me inspiró a hacer la migración, a [[https://notxor.nueva-actitud.org/][Notxor]], además gracias a sus artículos sobre Org-page, al mismo tiempo que sus consejos a través del canal de *IRC de emacs-es*, he conseguido realizar el paso. 
