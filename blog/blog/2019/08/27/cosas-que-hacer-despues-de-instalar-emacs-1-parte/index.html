@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Cósas que hácer después de instalar Emacs (1ª Parte) - Blog Personal de Maxxcan</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Patricio Martínez" />
+    <meta name="description" content="Cosas que hacer después de instalar Emacs" />
+    <meta name="keywords" content="emacs" />
+    <link rel="stylesheet" href="/media/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/media/css/prettify.css" type="text/css">
+  </head>
+  <body class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="/">Blog Personal de Maxxcan</a></h1>
+        <p>Blog sobre tecnología y diseño</p>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/tags/">Tags</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://www.github.com/maxxcan">GitHub</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="//www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="www.maxxcan.com">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1>Cósas que hácer después de instalar Emacs (1ª Parte)</h1>
+
+<div class="figure">
+<p><img src="/assets/blog/2019/08/27/cosas-que-hacer-despues-de-instalar-emacs-1-parte/cosas_despues_instalar_emacs.png" alt="cosas_despues_instalar_emacs.png" />
+</p>
+</div>
+
+<div id="outline-container-org6803581" class="outline-2">
+<h2 id="org6803581">Introducción</h2>
+<div class="outline-text-2" id="text-org6803581">
+<p>
+Si acabamos de instalar Emacs por primera vez y hemos visto los artículos anteriores aquí y aquí, podremos ver que Emacs resulta algo feote y que además a pesar de que he dicho en muchas ocasiones que Emacs es mucho más que un editor pues por lo general vemos que es un editor con alguna opción rara por ahí y poco más. 
+</p>
+
+<p>
+%imagen%
+</p>
+
+<p>
+Veremos qué hacer para dejarlo un poco más bonito y con muchas más funcionalidades.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org685b64b" class="outline-2">
+<h2 id="org685b64b">Cosas que hacer después de instalar Emacs</h2>
+<div class="outline-text-2" id="text-org685b64b">
+</div>
+<div id="outline-container-orgc1f6662" class="outline-3">
+<h3 id="orgc1f6662">Aprender Inglés</h3>
+<div class="outline-text-3" id="text-orgc1f6662">
+<p>
+Bueno esto parece una tontería pero aún me encuentro gente que no tiene ni idea de inglés por ahí y en general eso no es bueno si te gusta la informática. Tampoco hay que ser un experto ya que con saber cierto vocabulario básico es suficiente. En este caso lo digo porque Emacs no está traducido y por lo que yo sé parece que de momento no es la idea de hacerlo, aunque puede que me equivoque y ya haya alguna iniciativa por ahí. 
+</p>
+</div>
+</div>
+<div id="outline-container-orgae13571" class="outline-3">
+<h3 id="orgae13571">Deshabilitar la pantalla de bienvenida</h3>
+<div class="outline-text-3" id="text-orgae13571">
+<p>
+La pantalla de inicio suele ser algo petarda. Sobre todo porque te muestra combinaciones de teclas para la ayuda y como acceder a tutoriales que como ya he dicho están la mayoría en inglés. Así que excepto la primera o segunda vez que uno inicia Emacs, la mayor parte de las veces es una pantalla de bienvenida que poco nos interesa. 
+</p>
+
+<p>
+Para quitarla se hace de la siguiente manera:
+</p>
+
+<ul class="org-ul">
+<li>Desde el menú seguimos la siguiente ruta: Options --&gt; Customize Emacs</li>
+<li>Buscamos la opción</li>
+<li>Ponemos el cursor encima y presionamos <i>Enter</i> o clickamos en <i>Toggle</i> y veremos que se cambia a <i>off</i></li>
+<li>Clickamos o vamos con el cursor a <i>Save and Apply</i></li>
+</ul>
+
+<p>
+Nos preguntará si queremos guardar y/o crear el fichero <b>.emacs</b> y le diremos. En ese fichero estará la configuración de nuestro programa así que todo lo que haremos después será editando ese fichero.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ab1f76" class="outline-3">
+<h3 id="org2ab1f76">Ver los paquetes de los que disponemos</h3>
+<div class="outline-text-3" id="text-org2ab1f76">
+<p>
+Emacs tiene un montón de addons, complementos o paquetes, como quieras llamarlos. Y también tiene un gestor de paquetes para que puedas ver los que hay, instalarlos, borrarlos, actualizarlos, etc. 
+</p>
+
+<p>
+La gran cantidad de addons o paquetes que tiene Emacs es parte de su magia. Tiene muchísimos, además se añaden cada día y se actualizan o mejoran los que ya hay. Esto hace de Emacs el editor más versátil, variado y potente de todos ya que casi cualquier cosa que uno se imagina que necesite o no en un editor ya alguien lo ha pensado y ha creado un paquete para ello.
+</p>
+
+<p>
+Para acceder a los paquetes que tenemos lo hacemos de la siguiente manera:
+</p>
+
+<ul class="org-ul">
+<li>Desde el menú seguimos la siguiente ruta: Options --&gt; Manage Emacs Package</li>
+<li>O también presionamos <b>Alt+x</b> y escribimos en el minibuffer: list-packages</li>
+</ul>
+
+<p>
+Podemos echar un vistazo a los paquetes que de por sí ya disponemos. La mayoría ya estarán instalados y eso es fácil de ver porque al lado del paquete pone: <b>installaded</b> y además estos paquetes aparecen con un color más oscuro. 
+</p>
+
+<p>
+Para que veamos los que podemos instalar, éstos estarán en un color más claro o blanco y además pondrá <b>avalible</b>. Podemos poner el cursor sobre el paquete, darle a <i>Intro</i> y nos mostrará una nueva ventana con información del paquete, autor, versión, etc, y puede que un enlace a la web del autor donde explique más detalladamente cómo funciona su paquete. 
+</p>
+
+<p>
+Además para instalar un paquete lo que tenemos que haces es poner el cursor en la línea donde esté el paquete y presionar la tecla <b>i</b>, esto hará que aparezca una <b>i mayúscula</b> al principio de la línea, podemos hacer lo mismo con varios paquetes a la vez, si nos hemos equivocado o cambiamos de opinión, pondremos el cursor sobre el paquete y podemos pulsar la tecla <b>u</b> y entonces la I mayúscula desaparecerá. Una vez seleccionados los paquetes que querramos pulsamos la tecla <b>x</b> y nos pedirá confirmación para instalar los paquetes seleccionados. 
+</p>
+
+<p>
+Para actualizar los paquetes instalados presionamos la tecla <b>U mayúscula</b>. Entonces se marcarán los paquetes que se pueden actualizar, pulsamos nuevamente <b>x</b> y entonces podremos actualizar los paquetes. 
+</p>
+
+<p>
+Para salir del gestor de paquetes se hace pulsando la tecla <b>q</b>  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2a64f20" class="outline-3">
+<h3 id="org2a64f20">Añadir más repositorios</h3>
+<div class="outline-text-3" id="text-org2a64f20">
+<p>
+La cantidad de paquetes que trae de serie <i>Emacs</i> son muchísimos y muy variados. Pero si aún así pensamos que no son los suficientes o simplemente queremos ver que se cuece por otros lares, podemos añadir nuevos repositorios. 
+</p>
+
+<p>
+Un repositorio es una dirección en Internet donde podemos acceder a nuevos paquetes. Para Emacs hay a parte del oficial dos más y veremos que podemos hacer para añadirlos a nuestra lista de paquetes. 
+</p>
+
+<p>
+Seguiremos los siguientes pasos:
+</p>
+
+<ul class="org-ul">
+<li>Abrimos el fichero .emacs</li>
+<li>En el escribimos lo siguiente:</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
+
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>O también los podemos añadir uno a uno:</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">
+(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ; Org-mode's repository
+
+
+</pre>
+</div>
+
+<p>
+Una vez hecho salvamos el fichero con <b>Ctrl+x + Ctrl+y</b> y pulsamos <b>Alt+x</b> y escribimos <b>eval-buffer</b>. Con eso no hará falta que reiniciemos el programa. 
+</p>
+
+<p>
+Ahora si volvemos a nuestros gestor de paquetes veremos que hay muchos más.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf5478d3" class="outline-3">
+<h3 id="orgf5478d3">Añadiendo org mode</h3>
+<div class="outline-text-3" id="text-orgf5478d3">
+<p>
+Org es una herramienta fundamental y muy útil que vale para gran cantidad de cosas. Son tantas sus utilidades que hay muchas personas que han aprendido a usar Emacs sólo por <b>Org</b>. 
+</p>
+
+<p>
+Como voy a dedicar varios artículos a explicar <b>Org</b> no voy a decir más aquí y lo dejaremos para más adelante.
+</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+    <div>
+      <div class="post-meta">
+        <span title="post date" class="post-info">2019-08-27</span>
+        <span title="last modification date" class="post-info">2019-08-27</span>
+        <span title="tags" class="post-info"><a href="/tags/emacs/">emacs</a></span>
+        <span title="author" class="post-info">Patricio Martínez</span>
+      </div>
+      <section>
+        <h1>Comments</h1>
+      </section>
+      <script src="//code.jquery.com/jquery-latest.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="/media/js/main.js"></script>
+      <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 27.x (<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+          Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:maxxcan &lt;at&gt; disroot &lt;dot&gt; org">Patricio Martínez</a>
+          &nbsp;&nbsp;-&nbsp;&nbsp;
+          Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">org-page</a>
+          <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>

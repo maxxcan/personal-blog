@@ -10,14 +10,12 @@
 #+DESCRIPTION: Cosas que hacer después de instalar Emacs
 
 
-[[./media/img/cosas-hacer-despues-instalar/cosas_despues_instalar_emacs.png]]
-
 
 * Introducción
 
 Si acabamos de instalar Emacs por primera vez y hemos visto los artículos anteriores aquí y aquí, podremos ver que Emacs resulta algo feote y que además a pesar de que he dicho en muchas ocasiones que Emacs es mucho más que un editor pues por lo general vemos que es un editor con alguna opción rara por ahí y poco más. 
 
-%imagen%
+
 
 Veremos qué hacer para dejarlo un poco más bonito y con muchas más funcionalidades.
 
