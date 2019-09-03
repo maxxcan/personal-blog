@@ -2,7 +2,7 @@
 #+AUTHOR:      Patricio Martínez
 #+EMAIL:       maxxcan@disroot.org
 #+DATE:        2019-08-16 vie
-#+URI:         /blog/%y/%m/%d/introducción-a-emacs-2ª-parte
+#+URI:         /blog/%y/%m/%d/introduccion-a-emacs-2-parte
 #+KEYWORDS:    emacs
 #+TAGS:        emacs
 #+LANGUAGE:    en

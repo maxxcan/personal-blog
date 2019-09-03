@@ -4,10 +4,17 @@
     <title>Blog Personal de Maxxcan</title>
     <link>https://www.maxxcan.com</link>
     <description>Blog sobre tecnología y diseño</description>
-    <pubDate>mar, 27 ago 2019 13:01:03 CEST</pubDate>
-    <lastBuildDate>mar, 27 ago 2019 13:01:03 CEST</lastBuildDate>
+    <pubDate>mar, 03 sep 2019 11:16:04 CEST</pubDate>
+    <lastBuildDate>mar, 03 sep 2019 11:16:04 CEST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Org-page static site generator (https://github.com/kelvinh/org-page)</generator>
+    <item>
+      <title>Qué hacer después de instalar Emacs (2ª Parte)</title>
+      <link>https://www.maxxcan.com/blog/2019/09/03/que-hacer-despues-de-instalar-emacs-2-parte</link>
+      <description><![CDATA[Qué hacer después de instalar Emacs 2ª Parte]]></description>
+      <pubDate>2019-09-03</pubDate>
+      <guid>https://www.maxxcan.com/blog/2019/09/03/que-hacer-despues-de-instalar-emacs-2-parte</guid>
+    </item>
     <item>
       <title>Cosas que Amo de Emacs</title>
       <link>https://www.maxxcan.com/blog/2019/08/22/cosas-que-amo-de-emacs</link>
@@ -31,10 +38,10 @@
     </item>
     <item>
       <title>Introducción a Emacs (2ª Parte)</title>
-      <link>https://www.maxxcan.com/blog/2019/08/16/introducción-a-emacs-2ª-parte</link>
+      <link>https://www.maxxcan.com/blog/2019/08/16/introduccion-a-emacs-2-parte</link>
       <description><![CDATA[Esta es la segunda parte de la introducción a Emacs]]></description>
       <pubDate>2019-08-16</pubDate>
-      <guid>https://www.maxxcan.com/blog/2019/08/16/introducción-a-emacs-2ª-parte</guid>
+      <guid>https://www.maxxcan.com/blog/2019/08/16/introduccion-a-emacs-2-parte</guid>
     </item>
     <item>
       <title>Introducción a Emacs (3ª Parte)</title>

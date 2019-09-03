@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Qué hacer después de instalar Emacs (2ª Parte) - Blog Personal de Maxxcan</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Patricio Martínez" />
+    <meta name="description" content="Qué hacer después de instalar Emacs 2ª Parte" />
+    <meta name="keywords" content="emacs" />
+    <link rel="stylesheet" href="/media/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/media/css/prettify.css" type="text/css">
+  </head>
+  <body class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="/">Blog Personal de Maxxcan</a></h1>
+        <p>Blog sobre tecnología y diseño</p>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/tags/">Tags</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://www.github.com/maxxcan">GitHub</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="//www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="www.maxxcan.com">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1>Qué hacer después de instalar Emacs (2ª Parte)</h1>
+
+<div id="outline-container-orga20f15d" class="outline-2">
+<h2 id="orga20f15d">Algunos paquetes interesantes</h2>
+<div class="outline-text-2" id="text-orga20f15d">
+</div>
+<div id="outline-container-orga44b23f" class="outline-3">
+<h3 id="orga44b23f">Ido mode</h3>
+<div class="outline-text-3" id="text-orga44b23f">
+<p>
+<b>Ido Mode</b> extiende comandos como <i>find-file</i> y <i>switch-to-buffer</i> que como os podéis imaginar sirve para
+<b>abrir un fichero</b> o <b>cambiar de buffer</b>. Lo que hacer es que cuando ejecutamos cualquiera de esos comandos con
+por ejemplo <b>Ctrl+x+Ctrl+f</b> o <b>Ctrl+x+b</b> nos aparece de forma visual las opciones que tenemos.
+En este <a href="https://asciinema.org/a/27740">enlace</a> podemos ver en un vídeo cómo actúa.  
+</p>
+
+<p>
+Además de lo dicho se puede extender con <b>otras extensiones</b> que le dan <b>nuevas caractéristicas</b> y además
+se puede usar en otros lugares además de los dichos.
+</p>
+
+<p>
+No hace falta instalarlo ya que <b>viene por defecto</b>, sólo hay que <b>activarlo</b> escribiremos lo siguiente en nuestro fichero de configuración:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(require 'ido)
+(ido-mode)
+(ido-everywhere)
+</pre>
+</div>
+
+<p>
+Para más información os recomiendo <a href="http://defn.io/posts/2015-10-12-ido-mode.html">este artículo</a>  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07a05ba" class="outline-3">
+<h3 id="org07a05ba">Undo tree</h3>
+<div class="outline-text-3" id="text-org07a05ba">
+<p>
+<b>Undo tree</b> o árbol de deshacer, es para mí la <b>forma más bonita y práctica</b> de poder <b>hacer y deshacer</b> en <i>Emacs</i>. 
+Es bonito y es práctico. Como os imagináis nos muestra un <b>árbol</b> donde podemos ver con ramas y todo nuestro <b>historial 
+de acciones</b> y podemos movernos en el tiempo hacia delante y hacia atrás para <b>hacerlas o deshacerlas</b> y además nos 
+permite <b>cambiar de rama</b>. 
+</p>
+
+<p>
+Yo creo que con esta imágen que ya muy claro. 
+</p>
+
+
+<div class="figure">
+<p><img src="/assets/blog/2019/09/03/que-hacer-despues-de-instalar-emacs-2-parte/undo-tree.png" alt="undo-tree.png" />
+</p>
+</div>
+
+
+<p>
+Para <b>instalarlo</b> vamos a nuestro <b>gestor de paquetes</b> y buscamos el paquete <b>undo-tree</b>. 
+</p>
+
+<p>
+Una vez instalado, para <b>activarlo</b>, agregamos a nuestro fichero de configuración lo siguiente:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">
+(global-undo-tree-mode)
+
+</pre>
+</div>
+
+
+<p>
+Para más información en inglés tenéis este <a href="https://www.emacswiki.org/emacs/UndoTree">enlace</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org44c8d8e" class="outline-3">
+<h3 id="org44c8d8e">Wich key</h3>
+<div class="outline-text-3" id="text-org44c8d8e">
+<p>
+<b>Which key</b> nos permite <b>mostrarnos</b> cuales son las <b>combinaciones de teclas</b> de cada acción o comando en <i>Emacs</i>. Es realmente
+práctico ya que nos ayuda a realizar los comandos con las combinaciones de teclas y además a recordarlas.
+</p>
+
+<p>
+Para <b>instalarlo</b>, en el <b>gestor de paquetes</b> buscaremos el paquete llamado <b>which-key</b>.  
+</p>
+
+<p>
+Una vez instalado lo <b>activamos</b> escribiendo en el fichero de configuración: 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">
+(require 'which-key)
+(which-key-mode)
+
+(setq which-key-popup-type 'minibuffer)
+
+</pre>
+</div>
+
+<p>
+Todo lo referente a este paquete lo podemos encontrar en este <a href="https://github.com/justbur/emacs-which-key">enlace</a> aunque ya le dedicaremos un o dos artículos al igual
+que el resto de paquetes que estamos comentado. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd618815" class="outline-3">
+<h3 id="orgd618815">Flycheck</h3>
+<div class="outline-text-3" id="text-orgd618815">
+<p>
+<b>Flycheck</b> es un paquete o complemento que te <b>chequea el estilo y la sintaxis</b> de muchos lenguajes de programación. No están
+todos pero hay muchísimos, de hecho hay <a href="http://www.flycheck.org/en/latest/languages.html">más de 40</a> lenguajes. 
+</p>
+
+<p>
+Para <b>instalar</b> este paquete podemos usar nuestro <b>gestor de paquetes</b> habitual, buscar el paquete <b>flycheck</b> y añadir al fichero de configuración: 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+</pre>
+</div>
+
+<p>
+Una vez instalado podemos instalar <b>dos programas</b> que son para el chequeo sintáctico de <b>python y javascript</b>: 
+</p>
+
+<p>
+Para ello: 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">pip install pylint
+npm install eslint
+</pre>
+</div>
+
+<p>
+Posterior a eso he hecho la prueba con un archivo que imprime "hola" en python y con esto me he encontrado:
+</p>
+
+
+<div class="figure">
+<p><img src="/assets/blog/2019/09/03/que-hacer-despues-de-instalar-emacs-2-parte/flycheck-1.png" alt="flycheck-1.png" />
+</p>
+</div>
+
+<p>
+Aquí vemos en la imagen que la línea está precedida por una señal roja y abajo nos indica de que tenemos que poner paréntesis.
+</p>
+
+<p>
+Si lo hacemos:
+</p>
+
+
+
+<div class="figure">
+<p><img src="/assets/blog/2019/09/03/que-hacer-despues-de-instalar-emacs-2-parte/flycheck-2.png" alt="flycheck-2.png" />
+</p>
+</div>
+
+<p>
+Pues la marca roja cambia a verde aunque aún así me sigue dando algunos consejos. 
+</p>
+
+<p>
+Sin necesidad de instalar nada también me da consejos para mi fichero de configuración de Emacs. 
+</p>
+
+<p>
+%imagen% 
+</p>
+
+<p>
+Podréis encontrar más información en este <a href="http://www.flycheck.org/en/latest/languages.html#flycheck-languages">enlace.</a>
+</p>
+
+<p>
+Además de <b>flycheck</b> en Emacs también hay otro paquete llamado <b>flymaker</b> que también corrige nuestra sintaxis. El tema de estos
+programas es algo complejo por lo que lo dejaremos para un <b>artículo completo</b> donde comentaremos más sobre estos programas
+y la diferencia entre ambos.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgba6749d" class="outline-3">
+<h3 id="orgba6749d">Auto-complete</h3>
+<div class="outline-text-3" id="text-orgba6749d">
+<p>
+Sí, <b>auto-complete</b> hace lo que promete y es <b>autocompletar</b> el texto que estamos escribiendo. Sirve tanto para cuando estás escribiendo
+un programa con un lenguaje de programación o un documento cualesquiera. 
+</p>
+
+<p>
+Para <b>instalarlo</b> lo hacemos con nuestro <b>gestor de paquetes</b> y buscamos el paquete <b>auto-complete</b>. Además de este podemos instalar algunos que 
+comienzan con <b>ac-</b> y van seguidos de un lenguaje de programación u otra cosa y agrega más autocompletado al programa. Existe alguna excepción
+como el paquete <b>org-ac</b> y alguno otro más.  
+</p>
+
+<p>
+Una vez instalado lo <b>activamos</b> escribiendo en el fichero de configuración:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(ac-config-default)
+</pre>
+</div>
+
+<p>
+A partir de aquí observaremos esto: 
+</p>
+
+
+<div class="figure">
+<p><img src="/assets/blog/2019/09/03/que-hacer-despues-de-instalar-emacs-2-parte/ac.png" alt="ac.png" />
+</p>
+</div>
+
+
+<p>
+Este paquete y otro parecido son muy interesantes por lo que los veremos en <b>profundidad en un artículo exclusivo</b>
+para ellos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc53d6e" class="outline-3">
+<h3 id="orgdc53d6e">Yasnippets</h3>
+<div class="outline-text-3" id="text-orgdc53d6e">
+<p>
+<b>Yasnippets</b> viene del acrónimo <b>"Yet Another Snippet Extension"</b> y lo que nos facilita es un montón de
+<b>Snippets o trozos de código</b>. A estos trozos de código podemos acceder bien escribiendo un conjunto
+de texto, una palabra o frase y expandiendola con una tecla, por defecto TAB, o bien accediendo
+al menú. Por supuesto es más rápido con la tecla. 
+</p>
+
+<p>
+Para <b>instalarlo</b> buscar el paquete llamado <b>Yasnippet</b> e instalarlo con el <b>gestor de paquetes</b> de Emacs 
+y agregamos a nuestro <b>fichero de configuración</b> lo siguiente:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(require 'yasnippet)
+(yas-global-mode 1)
+</pre>
+</div>
+
+<p>
+Y ya veremos que en el menú de arriba ya aparece el menú de <b>Yasnippet</b> y podremos ver los código que nos ofrece. 
+</p>
+
+<p>
+Este paquete también es muy interesante y ya le daremos un artículo profundizando más en él en un futuro.
+</p>
+
+<p>
+De momento si quieres tener más información puedes visitar este <a href="http://joaotavora.github.io/yasnippet/">enlace</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb8f804d" class="outline-3">
+<h3 id="orgb8f804d">Algunos añadidos para lenguajes</h3>
+<div class="outline-text-3" id="text-orgb8f804d">
+<p>
+En <i>Emacs</i> además de lo visto existen infinidad de paquetes que nos <b>ayudan a programar</b> en los
+distintos lenguajes de programación. Yo creo casi no hay lenguaje que no tenga un <i>modo</i> para
+<i>Emacs</i>. 
+</p>
+
+<p>
+Los paquetes van desde ayudas para la <b>sintaxis, comprobadores de estilos, identadores automáticos,
+generadores de código, refactorizadores</b> y un largo etcétera. 
+</p>
+
+<p>
+Sería muy largo explicar todo eso aquí así que os prometo que en un futuro haré artículos viendo
+esos paquetes para los lenguajes más famosos y para otros no tan famosos. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0970a8e" class="outline-3">
+<h3 id="org0970a8e">Otros paquetes que pueden ser interesantes</h3>
+<div class="outline-text-3" id="text-org0970a8e">
+<p>
+Hay muchísimo paquetes para Emacs con distintas <b>funcionalidades</b>. Algunos de ellos
+pueden ser:
+</p>
+
+<ol class="org-ol">
+<li><b>olivetti</b>. Que nos centra el texto según un tamaño que le indiquemos.</li>
+<li><b>helm</b>. Un gran paquete que veremos en un futuro pero que os recomiendo este <a href="https://daemons.cf/posts/introduccin-a-helm/">artículo</a>.</li>
+<li><b>org-pomodoro</b>. Ya hablaremos de org pero con este paquete además podemos añadirle la <b>técnica pomodoro</b>.</li>
+<li><b>nyan-mode</b>. Que nos muestra a este <b>famoso gato</b> en nuestra barra de abajo</li>
+<li><b>nlim y minimap</b>. Para añadir los números de línea a la izquierda y un <b>minimapa</b> de nuestro fichero donde querramos.</li>
+<li>y muchos más que ya veremos</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org49356d2" class="outline-2">
+<h2 id="org49356d2">Punto y aparte</h2>
+<div class="outline-text-2" id="text-org49356d2">
+<p>
+Ya hemos visto gran cantidad de cosas que podemos hacer con Emacs una vez instalado. Algunas
+son más importantes que otras y para algunas personas seguro que su listado de cosas que hacer
+es distinto. 
+</p>
+
+<p>
+Como ya he recalcado en más de una ocasión cada uno de los paquetes comentados tendrán su propio o propios
+artículos ya que algunos son altamente interesantes, además veremos muchos más paquetes y ya dejaré en manos
+del lector si creen que son fundamentales para ellos o no. 
+</p>
+
+<p>
+Aún queda una tercera parte en la que contaremos algunas cosillas que pueden estar bien hacer pero desde un punto
+de vista más bien estético.
+</p>
+</div>
+</div>
+
+</div>
+</div>
+    <div>
+      <div class="post-meta">
+        <span title="post date" class="post-info">2019-09-03</span>
+        <span title="last modification date" class="post-info">2019-09-03</span>
+        <span title="tags" class="post-info"><a href="/tags/emacs/">emacs</a></span>
+        <span title="author" class="post-info">Patricio Martínez</span>
+      </div>
+      <section>
+        <h1>Comments</h1>
+      </section>
+      <script src="//code.jquery.com/jquery-latest.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="/media/js/main.js"></script>
+      <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 27.x (<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+          Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:maxxcan &lt;at&gt; disroot &lt;dot&gt; org">Patricio Martínez</a>
+          &nbsp;&nbsp;-&nbsp;&nbsp;
+          Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">org-page</a>
+          <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
