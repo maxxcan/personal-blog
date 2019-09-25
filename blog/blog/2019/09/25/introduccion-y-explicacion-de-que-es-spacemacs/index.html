@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Introducción y explicación de qué es Spacemacs - Blog Personal de Maxxcan</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Patricio Martínez" />
+    <meta name="description" content="Introdución y Spacemacs un derivado de Emacs" />
+    <meta name="keywords" content="emacs, spacemacs" />
+    <link rel="stylesheet" href="/media/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/media/css/prettify.css" type="text/css">
+  </head>
+  <body class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="/">Blog Personal de Maxxcan</a></h1>
+        <p>Blog sobre tecnología y diseño</p>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/blog-emacs/">Blog Emacs</a></li>
+          <li><a href="/tags/">Tags</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://www.github.com/maxxcan">GitHub</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="//www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="www.maxxcan.com">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1>Introducción y explicación de qué es Spacemacs</h1>
+
+
+<div id="outline-container-orgeef6797" class="outline-2">
+<h2 id="orgeef6797">Introducción</h2>
+<div class="outline-text-2" id="text-orgeef6797">
+<p>
+Mi idea era seguir haciendo artículos básicos sobre Emacs, pero viendo que ya hay muchos de ese tipo, en plan introductorios en el <a href="http://planet.emacs-es.org">Planeta Emacs en español</a> los  cuales están infinitamente mejor de lo que yo pudiera hacer he decidido dar un pequeño salto cuantitativo e ir comentando otras cosas de Emacs más concretas pero tal vez algo más avanzadas, tampoco mucho. 
+</p>
+
+
+
+<div class="figure">
+<p><img src="file:///imagenes/spacemacs/spacemacs-1.png" alt="spacemacs-1.png" />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org978429e" class="outline-2">
+<h2 id="org978429e">Qué es spacemacs</h2>
+<div class="outline-text-2" id="text-org978429e">
+<p>
+Spacemacs empezó como una forma de hacer Emacs más accesible usando por un lado reglas mnemotécnicas para poder acordarse de las combinaciones de teclas y por otro lado hacer un uso extensivo del modo <i>evil-mode</i> que es un modo que nos permite usar atajos de teclado de Vim dentro de Emacs. También usa el paquete <i>witch-key</i> con el cual podemos ir viendo al mismo tiempo que vamos pulsando teclas cuales son las opciones que tenemos y qué hace cada nueva combinación de teclas. 
+</p>
+
+
+
+<p>
+Pero eso eran sus comienzos. A día de hoy el proyecto tiene en <a href="https://github.com/syl20bnr/spacemacs">Github</a> más de 13000 estrellas y cerca de 7400 commits. 
+Así pues el proyecto ya tiene peso propio con una gran comunidad que aporta y se comunica a través de <a href="https://gitter.im/login?action=signup&amp;source=embedded&amp;returnTo=/login/embed">Gitter</a> de manera muy activa siendo posiblemente la comunidad más activa dentro del mundo de Emacs. 
+</p>
+
+<p>
+Además Spacemacs se sigue preocupando por hacer llegar Emacs a cada vez más gente preocupándose tanto de darle un aspecto por defecto mucho más atractivo visualmente y moderno que cuando ejecutas Emacs sin configurar y agrega algunas ventajas que no tiene Emacs donde para mí la más importante es el uso de <b>Layers</b>. 
+</p>
+</div>
+
+<div id="outline-container-orgf7f48d5" class="outline-3">
+<h3 id="orgf7f48d5">Layers</h3>
+<div class="outline-text-3" id="text-orgf7f48d5">
+<p>
+Los <b>Layers</b> son capas de configuraciones y paquetes. Esto se explica mejor con un ejemplo. Pongamos que quiero programar en <b>Common Lisp</b> algo muy acertado. Bueno pues configuro a Spacemacs para que añada este <i>Layer</i> (después veremos cómo). Una vez hecho esto Spacemacs nos instalará varios paquetes destinados para facilitar esta labor, paquetes que incluye coloreadores de sintaxis, completadores de código, auto acabado de paréntesis, así como el compilador correspondiente, puede que también refactorizadores, etc. 
+</p>
+
+<p>
+Y así con gran cantidad de lenguajes de programación por ejemplo. Además lo interesante es que aunque no lo tengamos previamente configurado para un lenguaje en concreto, en cuanto abramos un fichero con la extensión de un determinado lenguaje de programación Spacemacs nos instalará el <i>Layer</i> correspondiente a ese lenguaje de forma automática.  
+</p>
+
+<p>
+Pero como no solo de lenguajes de programación vive el Emaquero hay <i>Layer</i> para muchas otras cosas como por ejemplo:
+</p>
+
+<ol class="org-ol">
+<li>Para chatear
+<ol class="org-ol">
+<li>erc</li>
+<li>jabber</li>
+<li>slack</li>
+<li>rcirc</li>
+</ol></li>
+
+<li>Revisores 
+<ol class="org-ol">
+<li>De sintaxis</li>
+<li>Ortográfico</li>
+</ol></li>
+
+<li>Autocompletados 
+
+<ol class="org-ol">
+<li>E-mail</li>
+<li>Gnus</li>
+<li>mu4e</li>
+</ol></li>
+
+<li>Frameworks
+<ol class="org-ol">
+<li>django</li>
+<li>react</li>
+<li>ruby on rails</li>
+</ol></li>
+
+<li>Control de versión
+<ol class="org-ol">
+<li>git</li>
+<li>github</li>
+<li>preforce</li>
+</ol></li>
+
+<li>Herramientas 
+
+<ol class="org-ol">
+<li>ansible</li>
+<li>docker</li>
+<li>finanzas</li>
+<li>geolocalización</li>
+<li>nginx</li>
+<li>puppet</li>
+<li>systemd</li>
+<li>tmux</li>
+</ol></li>
+
+<li>Servicios Web
+<ol class="org-ol">
+<li>elfeed (lector de feeds)</li>
+<li>evernote</li>
+<li>spotify</li>
+<li>twitter</li>
+<li>wakatime</li>
+</ol></li>
+</ol>
+
+
+<p>
+Y muchos más <i>Layers</i>. Además cada cierto tiempo se agregan más y si no existe en su extensa documentación te explican como crearte tu propio layer con tus paquetes y tus configuraciones. Esto es algo que ayuda mucho a automatizar nuestra propia configuración.
+</p>
+
+<p>
+ePara saber todos los <i>Layers</i> que hay en Spacemacs podéis verlo <a href="http://spacemacs.org/layers/LAYERS.html">aquí</a>. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0d519ed" class="outline-2">
+<h2 id="org0d519ed">Cómo instalar spacemacs</h2>
+<div class="outline-text-2" id="text-org0d519ed">
+<p>
+Para instalar Spacemacs por supuesto hay que tener instalado <b>Emacs</b> y si ya lo tienes y no quieres perder la antigua configuración no olvides hacer una copia del directorio <b>.emacs/</b> ya que este se va a sobreescribir para instalar Spacemacs. También haz copia por seguridad de tu fichero <b>.emacs</b>. Todo esto lo podemos hacer con el siguiente comando:
+</p>
+
+<pre class="example">
+mv ~/.emacs.d ~/.emacs.d.back &amp;&amp; mv ~/.emacs ~/.emacs.bak
+</pre>
+
+
+<p>
+Ahora instalaremos Spacemacs con el siguiente comando:
+</p>
+
+<pre class="example">
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d 
+</pre>
+
+
+<p>
+Una vez iniciado Emacs después de esto, nos hará un par de preguntas sobre si queremos el modo <i>evil</i> (con los atajos y forma de trabajar de Vim) o la forma normal de Emacs. Además podemos instalar una versión completa con más Layers por defecto y una versión bootstrap con lo justo y necesario.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9115510" class="outline-2">
+<h2 id="org9115510">Configurar spacemacs</h2>
+<div class="outline-text-2" id="text-org9115510">
+<p>
+Una vez iniciado Spacemacs no crea un fichero de configuración llamado <b>.spacemacs</b> que es muy largo y completo. 
+</p>
+
+<p>
+Lo interesante está al principio donde podemos indicar los distintos <i>Layers</i> que queramos usar. Además más abajo podemos indicar otros paquetes sueltos que podemos instalar. Esta parte es importante porque si queremos instalar un paquete en concreto no hay que usar el <i>list-packages</i> aunque por defecto aquí se usa <i>paradox-package</i> pero si instalamos algún paquete con alguna de estas formas pero luego no lo escribís en el fichero .spacemacs cuando reinicies Emacs se desinstalará el paquete.
+</p>
+
+<p>
+También hay una zona donde podemos indicar algunos paquetes que no queremos que se instalen. Esto por si algún <i>Layer</i> instala algún paquete que por alguna razón no queramos o nos dé problemas. 
+</p>
+
+<p>
+Más abajo hay unas secciones para las configuraciones personales de los distintos paquetes. Explicaré esto más detenidamente en el siguiente post.     
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-org2b4dfdf" class="outline-2">
+<h2 id="org2b4dfdf">Mi experiencia con Spacemacs</h2>
+<div class="outline-text-2" id="text-org2b4dfdf">
+<p>
+Mi experiencia con Spacemacs en general ha sido grata y muy satisfactoria. Al principio me tuve que adaptarme un poco a la forma de trabajar de la forma como lo hace Spacemacs y su sistema de configuración y <i>Layers</i>. Si la verdad es que quieres tener un sistema 100% personalizado te aconsejo que sigas con Emacs, pero si no te importa adaptarte un poco al funcionamiento de Spacemacs éste tiene muchas ventajas. Además en general la forma de configurarlo es igual que en Emacs solo que en el fichero .spacemacs tendrás que poner esa configuración en lugares determinados. 
+</p>
+
+<p>
+La prueba clara de que Spacemacs se ha adaptado muy bien a mí o yo a él es que desde que empecé a usarlo no he vuelto a la configuración básica de Emacs. 
+</p>
+
+
+<div class="figure">
+<p><img src="./imagenes/spacemacs/spacemacs-2.png" alt="spacemacs-2.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge940a60" class="outline-2">
+<h2 id="orge940a60">Para saber más</h2>
+<div class="outline-text-2" id="text-orge940a60">
+<p>
+La mejor forma de para saber más acerca de Spacemacs es visitar su propia <a href="http://spacemacs.org/">página web</a>. Desde ahí podremos acceder a su <a href="https://github.com/syl20bnr/spacemacs">Github</a>, a su <a href="https://twitter.com/spacemacs">twitter</a>, ver los tutoriales o directamente conectarse al chat de Spacemacs en gitter. 
+</p>
+
+<p>
+Inclusive, puedes probarglo de manera online. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgfd852d9" class="outline-2">
+<h2 id="orgfd852d9">En un futuro</h2>
+<div class="outline-text-2" id="text-orgfd852d9">
+<p>
+En un futuro haré mis tutoriales sobre Emacs enfocándome tanto en Emacs como a Spacemacs a la hora de la configuración y además estoy creando una serie de videotutoriales sobre Spacemacs en Youtube que iré anunciando por aquí. 
+</p>
+</div>
+</div>
+
+</div>
+</div>
+    <div>
+      <div class="post-meta">
+        <span title="post date" class="post-info">2019-09-25</span>
+        <span title="last modification date" class="post-info">2019-09-25</span>
+        <span title="tags" class="post-info"><a href="/tags/emacs/">emacs</a>, <a href="/tags/spacemacs/">spacemacs</a></span>
+        <span title="author" class="post-info">Patricio Martínez</span>
+      </div>
+      <section>
+        <h1>Comments</h1>
+      </section>
+      <script src="//code.jquery.com/jquery-latest.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="/media/js/main.js"></script>
+      <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 27.x (<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+          Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:maxxcan &lt;at&gt; disroot &lt;dot&gt; org">Patricio Martínez</a>
+          &nbsp;&nbsp;-&nbsp;&nbsp;
+          Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">org-page</a>
+          <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
