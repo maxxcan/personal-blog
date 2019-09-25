@@ -5,7 +5,7 @@
 #+URI:         /blog/%y/%m/%d/introduccion-y-que-es-spacemacs
 #+KEYWORDS:    spacemacs, emacs
 #+TAGS:        emacs, spacemacs
-#+LANGUAGE:    en
+#+LANGUAGE:    es
 #+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 #+DESCRIPTION: Qué es Spacemacs
 
