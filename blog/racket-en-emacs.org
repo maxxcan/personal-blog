@@ -1,0 +1,93 @@
+#+TITLE:       Racket con Emacs
+#+AUTHOR:      Patricio Martínez
+#+EMAIL:       maxxcan@disroot.org
+#+DATE:        2019-09-29 dom
+#+URI:         /blog/%y/%m/%d/racket-con-emacs
+#+KEYWORDS:    emacs, racket, lisp
+#+TAGS:        emacs, racket, lisp
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: Como trabajar con Racket en Emacs
+
+* Introducción 
+
+Hace tiempo que no escribo en este blog, por lo que tengo que pedir perdón, y es que he estado muy liado con un trabajo nuevo. La parte buena es que he acumulado mucho conocimiento en el uso de Emacs, ya sabéis que Emacs tiene un *aprendizaje infinito*, así que tengo una preparados una *serie de artículos* relacionados con Emacs pero aplicados a mi trabajo. 
+
+Pero antes escribiré un par de artículos rápidos de cosas como siempre pequeñas pero muy útiles que tiene Emacs. 
+
+Por un lado, como amante de todos los lenguajes que se parezcan o sean derivados de Lisp he estado haciendo cosillas con *Racket* y como no era de extrañar me ha encantado. 
+
+Para el que no lo sepa Racket es un *lenguaje multipropósito* que se creó en el año 1994 y que se usa para muchas cosas, desde crear documentos a programas con interfaz gráfica, aplicaciones web como la famosa [[https://news.ycombinator.com/][Hacker News]], frameworks para testeo y también se usa mucho para enseñanza. Por ejemplo, racket se usa para enseñar álgebra a alumnos de todo el mundo gracias al [[http://www.bootstrapworld.org/][programa Bootstrap]].
+
+Yo lo estoy usando para ver si puede ser una buena *alternativa a R*, pero eso da a muchos otros artículos, el asunto es que cuando normalmente se conoce un nuevo lenguaje lo que hacemos todos es ver que tan bien soportado está ese lenguaje en *Emacs*. Si el lenguaje nos gusta y además tiene un buen soporte en Emacs pues ya directamente nos enamoramos de él. 
+
+Racket, tal como anuncia su [[https://racket-lang.org/][web]] coge lo mejor de Scheme y de Lisp, por lo que el lenguaje es genial y además tiene un muy buen soporte en Emacs.
+
+Así que vamos con ello
+
+* Instalando racket 
+
+
+Instalar racket es muy sencillo y por supuesto depende de tu sistema, ve a la su [[https://download.racket-lang.org/][página oficial de descarga]] y selecciona tu sistema. Si usas *ArchLinux* como yo pues ya sabes que lo tienes en los repositorios, así que para instalarlo solo tienes que ejecutar la orden:
+
+#+BEGIN_SRC shell
+pacman -S racket
+#+END_SRC
+
+O buscarlo con tu gestor de paquetes (pamac, octopi, etc) preferido. 
+
+También hay una versión mínima que *no lleva a al Dr. Racket*, que es un entorno gráfico que facilita la programación con Racket. Si vas a usar como yo Emacs para programar con Racket pues ésta es la tuya.
+
+* Racket en Emacs
+
+Vamos ahora a trabajar con Racket en Emacs el cual no solo hay un modo el [[https://github.com/greghendershott/racket-mode][racket-mode]] sino que tiene además otros muchos modos más, así como coloreo sintáctico y autocompletado.
+
+Toda la información la tenemos muy bien detallada en la [[https://docs.racket-lang.org/guide/Emacs.html][documentación de Racket]]. 
+
+No hay mucho más que explicar ya que funciona muy bien y tiene su repl integrado con lo que vemos en todo momento el resultado de lo que hacemos
+
+[[./imagenes/racket-img/emacs-and-repl.png]]
+
+
+* Racket en Spacemacs
+
+Para Spacemacs hay una capa o *layer* para Racket. Así que solo hay que agregarlo al fichero .spacemacs y listo. 
+
+Mas información en este [[http://spacemacs.org/layers/+lang/racket/README.html][enlace]].
+
+
+* Org-mode, babel y Racket
+
+Esta parte fue *más complicada* ya que cuando agregué racket dentro de las etiquetas *+BEGIN_SRC racket*, dentro del documento org me daba error ya que
+no conocía ese lenguaje. Entonces aunque en melpa no existe un *paquete ob-racket*, que son los paquetes que te permiten agregar distintas sintaxis y que se ejecute distingos lenguajes dentro de un documento org. En todo caso, sí encontré un ob-racket en github, pero esto al final me da la sensación que por el error que me daba *no está actualizado* y no funciona con la última versión de org-mode. 
+
+Al final la solución fue la siguiente y es poner la etiqueta *#+BEGIN_SRC scheme*, para que me colorease la sintaxis adecuadamente y para que me ejecutase el código tuve que hacer que por defecto en vez de usar el *motor scheme*  por defecto que es *guile* usase racket. Para ello hay que añadir el siguiente código a nuestro *fichero de configuración* .emacs o .spacemacs. 
+
+#+BEGIN_SRC elisp
+(add-hook 'scheme-mode-hook 'geiser-mode)
+(setq geiser-default-implementation 'racket)
+#+END_SRC
+
+Como ya vimos en la captura que he puesto antes racket muestra en su repl gráficos sin problemas. Para hacer esto en org mode, y aún estoy en proceso de ver si se puede mejorar, es que te pone un enlace a la imagen tal cual, y yo lo que de momento hago de forma manual es transformarlo en un enlace a imagen en el lenguaje de org mode y además añado un atributo para ponerle un tamaño específico. 
+
+Os dejo las capturas para que veáis el proceso. 
+
+Aquí ejecutando el código en org mode 
+
+[[./imagenes/racket-img/exec-racket.png]]
+
+
+Ahora le añadimos las etiquetas adecuadas para que sea una imagen en org mode
+
+[[./imagenes/racket-img/img-org-mode.png]]
+
+
+Ahora vemos como queda en un documento pdf exportándolo con Latex 
+
+[[./imagenes/racket-img/export-latex.png]]
+
+* Finalmente 
+
+Para finalizar comentar que como hace mucho que no escribo post en mi blog no sé si he ido muy rápido o muy lento, así que cualquier duda que tengáis no dudar de ponerlo en los comentarios y si hay muchas dudas puedo hacer una segunda parte explicándome mejor o incluso un pequeño tutorial sobre racket.
+
+Muchas gracias por vuestra atención y siento la tardanza entre post y post.
