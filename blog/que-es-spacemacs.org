@@ -15,7 +15,7 @@
 Mi idea era seguir haciendo artículos básicos sobre Emacs, pero viendo que ya hay muchos de ese tipo, en plan introductorios en el [[http://planet.emacs-es.org][Planeta Emacs en español]] los  cuales están infinitamente mejor de lo que yo pudiera hacer he decidido dar un pequeño salto cuantitativo e ir comentando otras cosas de Emacs más concretas pero tal vez algo más avanzadas, tampoco mucho. 
 
 
-[[/imagenes/spacemacs/spacemacs-1.png]]
+[[./imagenes/spacemacs/spacemacs-1.png]]
 
 
 * Qué es spacemacs

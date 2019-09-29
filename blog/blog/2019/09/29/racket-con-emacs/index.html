@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Racket con Emacs - Blog Personal de Maxxcan</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Patricio Martínez" />
+    <meta name="description" content="Como trabajar con Racket en Emacs" />
+    <meta name="keywords" content="emacs, racket, lisp" />
+    <link rel="stylesheet" href="/media/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/media/css/prettify.css" type="text/css">
+  </head>
+  <body class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="/">Blog Personal de Maxxcan</a></h1>
+        <p>Blog sobre tecnología y diseño</p>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/tags/">Tags</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://www.github.com/maxxcan">GitHub</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="//www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="www.maxxcan.com">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1>Racket con Emacs</h1>
+
+<div id="outline-container-org71048e6" class="outline-2">
+<h2 id="org71048e6">Introducción</h2>
+<div class="outline-text-2" id="text-org71048e6">
+<p>
+Hace tiempo que no escribo en este blog, por lo que tengo que pedir perdón, y es que he estado muy liado con un trabajo nuevo. La parte buena es que he acumulado mucho conocimiento en el uso de Emacs, ya sabéis que Emacs tiene un <b>aprendizaje infinito</b>, así que tengo una preparados una <b>serie de artículos</b> relacionados con Emacs pero aplicados a mi trabajo. 
+</p>
+
+<p>
+Pero antes escribiré un par de artículos rápidos de cosas como siempre pequeñas pero muy útiles que tiene Emacs. 
+</p>
+
+<p>
+Por un lado, como amante de todos los lenguajes que se parezcan o sean derivados de Lisp he estado haciendo cosillas con <b>Racket</b> y como no era de extrañar me ha encantado. 
+</p>
+
+<p>
+Para el que no lo sepa Racket es un <b>lenguaje multipropósito</b> que se creó en el año 1994 y que se usa para muchas cosas, desde crear documentos a programas con interfaz gráfica, aplicaciones web como la famosa <a href="https://news.ycombinator.com/">Hacker News</a>, frameworks para testeo y también se usa mucho para enseñanza. Por ejemplo, racket se usa para enseñar álgebra a alumnos de todo el mundo gracias al <a href="http://www.bootstrapworld.org/">programa Bootstrap</a>.
+</p>
+
+<p>
+Yo lo estoy usando para ver si puede ser una buena <b>alternativa a R</b>, pero eso da a muchos otros artículos, el asunto es que cuando normalmente se conoce un nuevo lenguaje lo que hacemos todos es ver que tan bien soportado está ese lenguaje en <b>Emacs</b>. Si el lenguaje nos gusta y además tiene un buen soporte en Emacs pues ya directamente nos enamoramos de él. 
+</p>
+
+<p>
+Racket, tal como anuncia su <a href="https://racket-lang.org/">web</a> coge lo mejor de Scheme y de Lisp, por lo que el lenguaje es genial y además tiene un muy buen soporte en Emacs.
+</p>
+
+<p>
+Así que vamos con ello
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8286caf" class="outline-2">
+<h2 id="org8286caf">Instalando racket</h2>
+<div class="outline-text-2" id="text-org8286caf">
+<p>
+Instalar racket es muy sencillo y por supuesto depende de tu sistema, ve a la su <a href="https://download.racket-lang.org/">página oficial de descarga</a> y selecciona tu sistema. Si usas <b>ArchLinux</b> como yo pues ya sabes que lo tienes en los repositorios, así que para instalarlo solo tienes que ejecutar la orden:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">pacman -S racket
+</pre>
+</div>
+
+<p>
+O buscarlo con tu gestor de paquetes (pamac, octopi, etc) preferido. 
+</p>
+
+<p>
+También hay una versión mínima que <b>no lleva a al Dr. Racket</b>, que es un entorno gráfico que facilita la programación con Racket. Si vas a usar como yo Emacs para programar con Racket pues ésta es la tuya.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge3d7417" class="outline-2">
+<h2 id="orge3d7417">Racket en Emacs</h2>
+<div class="outline-text-2" id="text-orge3d7417">
+<p>
+Vamos ahora a trabajar con Racket en Emacs el cual no solo hay un modo el <a href="https://github.com/greghendershott/racket-mode">racket-mode</a> sino que tiene además otros muchos modos más, así como coloreo sintáctico y autocompletado.
+</p>
+
+<p>
+Toda la información la tenemos muy bien detallada en la <a href="https://docs.racket-lang.org/guide/Emacs.html">documentación de Racket</a>. 
+</p>
+
+<p>
+No hay mucho más que explicar ya que funciona muy bien y tiene su repl integrado con lo que vemos en todo momento el resultado de lo que hacemos
+</p>
+
+
+<div class="figure">
+<p><img src="/assets/blog/2019/09/29/racket-con-emacs/emacs-and-repl.png" alt="emacs-and-repl.png" />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org3d4fd2d" class="outline-2">
+<h2 id="org3d4fd2d">Racket en Spacemacs</h2>
+<div class="outline-text-2" id="text-org3d4fd2d">
+<p>
+Para Spacemacs hay una capa o <b>layer</b> para Racket. Así que solo hay que agregarlo al fichero .spacemacs y listo. 
+</p>
+
+<p>
+Mas información en este <a href="http://spacemacs.org/layers/+lang/racket/README.html">enlace</a>.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgbacf4db" class="outline-2">
+<h2 id="orgbacf4db">Org-mode, babel y Racket</h2>
+<div class="outline-text-2" id="text-orgbacf4db">
+<p>
+Esta parte fue <b>más complicada</b> ya que cuando agregué racket dentro de las etiquetas <b>+BEGIN_SRC racket</b>, dentro del documento org me daba error ya que
+no conocía ese lenguaje. Entonces aunque en melpa no existe un <b>paquete ob-racket</b>, que son los paquetes que te permiten agregar distintas sintaxis y que se ejecute distingos lenguajes dentro de un documento org. En todo caso, sí encontré un ob-racket en github, pero esto al final me da la sensación que por el error que me daba <b>no está actualizado</b> y no funciona con la última versión de org-mode. 
+</p>
+
+<p>
+Al final la solución fue la siguiente y es poner la etiqueta <b>#+BEGIN_SRC scheme</b>, para que me colorease la sintaxis adecuadamente y para que me ejecutase el código tuve que hacer que por defecto en vez de usar el <b>motor scheme</b>  por defecto que es <b>guile</b> usase racket. Para ello hay que añadir el siguiente código a nuestro <b>fichero de configuración</b> .emacs o .spacemacs. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(add-hook 'scheme-mode-hook 'geiser-mode)
+(setq geiser-default-implementation 'racket)
+</pre>
+</div>
+
+<p>
+Como ya vimos en la captura que he puesto antes racket muestra en su repl gráficos sin problemas. Para hacer esto en org mode, y aún estoy en proceso de ver si se puede mejorar, es que te pone un enlace a la imagen tal cual, y yo lo que de momento hago de forma manual es transformarlo en un enlace a imagen en el lenguaje de org mode y además añado un atributo para ponerle un tamaño específico. 
+</p>
+
+<p>
+Os dejo las capturas para que veáis el proceso. 
+</p>
+
+<p>
+Aquí ejecutando el código en org mode 
+</p>
+
+
+<div class="figure">
+<p><img src="/assets/blog/2019/09/29/racket-con-emacs/exec-racket.png" alt="exec-racket.png" />
+</p>
+</div>
+
+
+<p>
+Ahora le añadimos las etiquetas adecuadas para que sea una imagen en org mode
+</p>
+
+
+<div class="figure">
+<p><img src="/assets/blog/2019/09/29/racket-con-emacs/img-org-mode.png" alt="img-org-mode.png" />
+</p>
+</div>
+
+
+<p>
+Ahora vemos como queda en un documento pdf exportándolo con Latex 
+</p>
+
+
+<div class="figure">
+<p><img src="/assets/blog/2019/09/29/racket-con-emacs/export-latex.png" alt="export-latex.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1e05910" class="outline-2">
+<h2 id="org1e05910">Finalmente</h2>
+<div class="outline-text-2" id="text-org1e05910">
+<p>
+Para finalizar comentar que como hace mucho que no escribo post en mi blog no sé si he ido muy rápido o muy lento, así que cualquier duda que tengáis no dudar de ponerlo en los comentarios y si hay muchas dudas puedo hacer una segunda parte explicándome mejor o incluso un pequeño tutorial sobre racket.
+</p>
+
+<p>
+Muchas gracias por vuestra atención y siento la tardanza entre post y post.
+</p>
+</div>
+</div>
+
+</div>
+</div>
+    <div>
+      <div class="post-meta">
+        <span title="post date" class="post-info">2019-09-29</span>
+        <span title="last modification date" class="post-info">2019-09-29</span>
+        <span title="tags" class="post-info"><a href="/tags/emacs/">emacs</a>, <a href="/tags/racket/">racket</a>, <a href="/tags/lisp/">lisp</a></span>
+        <span title="author" class="post-info">Patricio Martínez</span>
+      </div>
+      <section>
+        <h1>Comments</h1>
+      </section>
+      <script src="//code.jquery.com/jquery-latest.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="/media/js/main.js"></script>
+      <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 27.x (<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+          Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:maxxcan &lt;at&gt; disroot &lt;dot&gt; org">Patricio Martínez</a>
+          &nbsp;&nbsp;-&nbsp;&nbsp;
+          Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">org-page</a>
+          <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
