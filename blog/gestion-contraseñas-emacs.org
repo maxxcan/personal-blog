@@ -1,0 +1,72 @@
+#+TITLE:       Cómo gestionar tus contraseñas con Emacs y Pass
+#+AUTHOR:      Patricio Martínez
+#+EMAIL:       maxxcan@disroot.org
+#+DATE:        2019-09-30 lun
+#+URI:         /blog/%y/%m/%d/como-gestionar-tus-contrasenas-con-emacs-y-pass
+#+KEYWORDS:    emacs, pass
+#+TAGS:        emacs, pass
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: Como gestionar las contraseñas con Emacs y Pass
+
+* Introducción
+
+A día de hoy tenemos gran cantidad de servicios los cuales requieren de contraseñas. Desde páginas webs, a aplicaciones para el móvil, así como incluso acceso a nuestros bancos a través de sus portales o cajeros. 
+
+Tanta cantidad de contraseñas son difíciles de gestionar y más si queremos usar contraseñas fuertes y que sean distintas para cada servicio, algo totalmente aconsejable ya que la opción de usar la misma para todo es completamente desaconsejada. 
+
+Para eso se han desarrollado gran cantidad de gestores de contraseñas, desde aplicaciones a servicios en la nube que nos aseguran gestionar nuestras contraseñas desde cualquier sitio y además incluso nos generan contraseñas aleatorias y fuertes para nuestra seguridad.
+
+El asunto es que he estado dándole muchas vueltas a ver que opción era mejor para mí y aunque hay algunas muy buenas, otras las descarto por no ser libres o estar basadas en la nube. 
+
+Al final he optado para lo que para mí es la mejor opción, [[https://www.passwordstore.org/][Pass]]. 
+
+Pass es una elección genial ya que por un lado es un programa que es simple, código libre y con una filosofía muy UNIX, por su sencillez y utilidad. Además puedes tener tu propio servidor en la nube con un *servidor git* y así lo podrás tener actualizado entre varios dispositivos sin problemas. 
+
+Para algunas personas puede que esta opción les parezca demasiado espartano pero yo les aconsejo que le den una oportunidad y no se arrepentirán.
+
+
+
+
+
+* Instalando cosas
+
+Necesitamos gnupg y pass 
+
+Si estás en Archlinux como yo lo que tienes que ejecutar es:
+
+: pacman -S pass 
+
+y 
+
+: pacman -S gnupg
+
+En otros sistemas no es muy distinto y los paquetes necesarios para instalar se llaman igual.
+
+* Configurando cosas
+
+Generamos una clave con gpg --gen-key
+
+* Usando pass 
+
+Ahora creamos un directorio con nuestras claves con la orden:
+
+#+BEGIN_SRC shell
+pass init <correo-electronico>
+#+END_SRC
+
+Si tienes alguna duda lo mejor es ir a su propia [[https://www.passwordstore.org/][página web]]  donde lo explica todo y de forma muy sencilla.
+
+
+
+
+
+* Usando pass en Emacs
+
+Esta es la parte fácil y divertida. Sólo hay que instalar el paquete *pass* y una vez instalado solo tenemos que pulsar *Alt-x* y escribir *pass* 
+
+Una vez hecho esto nos saldrá una interfaz que es de lo más explicativa y fácil de usar.
+
+* Finalizando
+
+No hay mucho más que decir, si tenéis dudas o algo no os funciona bien no dudéis en preguntarme. 
