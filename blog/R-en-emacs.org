@@ -1,0 +1,64 @@
+#+TITLE:       Trabajando con R en Emacs
+#+AUTHOR:      Patricio Martínez
+#+EMAIL:       maxxcan@disroot.org
+#+DATE:        2019-10-09 mié
+#+URI:         /blog/%y/%m/%d/trabajando-con-r-en-emacs
+#+KEYWORDS:    R, emacs, estadistica
+#+TAGS:        R, emacs, estadistica
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: Cómo trabajar con R en Emacs
+
+
+* Introducción 
+
+Normalmente los paquetes de software estadístico son programas muy complejos y poderosos para el análisis y la manipulación de los datos. El problema en muchas ocasiones es que estos programas nos ofrecen unas interfaces de usuario que dejan mucho que desear. En nuestro caso en concreto qué es R ni siquiera tiene una interfaz de usuario gráfica y hay que recurrir a la línea de comandos. Esta opción es muy útil y potente pero sobre todo para las personas que empiezan en el uso de este paquete de análisis estadístico puede resultar confuso y con una dificultad elevada. 
+
+* Y llegó Rstudio
+
+*Rstudio* es posiblemente una de las mejores cosas que le ha podido para a R ya que le proporcionó un IDE (entorno de desarrollo integrado) además de una serie de paquetes para R que le han dado mucha potencia y versatilidad tales como son shiny, kinitr, Rmarkdown, etc. 
+
+*Rstudio* fue creado en el año 2011 por la empresa [[https://rstudio.com/][Rstudio Inc.]] fundada por [[https://en.wikipedia.org/wiki/Joseph_J._Allaire][J. J. Allaire]]. 
+
+Esta empresa proporciona dos versiones de Rstudio, una para escritorio y otra para servidores y ambas están bajo la licencia *copyleft* [[https://en.wikipedia.org/wiki/GNU_Affero_General_Public_License][AGPL]] que es como la licencia  *GPL* pero con una clausula extra enfocada a servicios que estén alojados en servidores. La empresa además de las mencionadas versiones de Rstudio ofrece otros servicios muy interesantes para el desarrollo, análisis y publicación de estudios estadístico.
+
+La verdad es que podría escribir muchísimo más sobre las bondades de Rstudio pero para eso hay muchísimos artículos en la red que hablan sobre ello.
+
+* Los problemas con Rstudio
+
+Y como no existen ni los programas perfectos ni las personas perfectas también podemos hablar de los problemas o desventajas de Rstudio. 
+Algunas ventajas son nimias pero puede que molestas en según que entornos y es que Rstudio está escrito en C++, Qt, java y javascript. Esto hace que el programa sea un poco "pesado" para ciertos equipos y si trabajamos con la versión de servidor necesitaremos un mayor ancho de banda para trabajar con soltura. Como digo no es un problema para personas del primer mundo como EE.UU o Europa pero si nos vamos a otros países o zonas como latinoamerica la cosa cambia bastante. 
+
+Pero el mayor problema que tiene Rstudio es que su editor de texto es limitado y a pesar de que cumple perfectamente con la labor no está preparado para tareas más complejas o exigentes con el texto. Esa limitación a la hora de editar texto, algo que es fundamental si estamos haciendo toda nuestro trabajo en Rstudio no solo lo limita sino que además lo puede hacer tedioso de usar. 
+
+
+* Emacs como una buena solución
+
+Aquí podemos usar el que en mi opinión y larga experiencia en editores de textos e IDES, es el mejor de largo de todos, y ese [[https://www.gnu.org/software/emacs/][Emacs]]. 
+
+¿Pero por qué Emacs es tan bueno? La verdad es que es un poco de difícil de explicar a los neófitos de Emacs el por qué es un programa. El problema de Emacs es que parece demasiado complicado para los que solo buscan un editor sencillo y parece falto de características para aquellos que buscan un IDE completo. Pero la realidad es que Emacs puede ser un editor sencillo o un IDE muy completo, puede ser por decirlo así lo que uno quiera. Es como si tuviéramos el mejor utilitario del mundo pero que además lo podemos transformar en un avión, un barco o un submarino.
+
+Pero para ser más específicos vamos a intentar resumir las características más importantes de Emacs que lo hacen único:
+
++ Como editor es sublime con gran soporte para muchos lenguajes, coloreado de sintaxis, búsqueda y reemplazo de texto usando expresiones regulares, control de versiones, etc. También tiene muchas combinaciones de teclas para poder editar nuestro texto a la velocidad del rayo y admite la creación de nuestras propias macros de teclado para que hagamos lo que nos plazca.
+
++ Es un programa altamente configurable y adaptable que nos permite desde tener un editor simple, a un IDE muy avanzado, así como un gestor de correo, gestor de proyectos, lector de noticias, calendario o incluso un reproductor de música. Toda esa potencia se la da Emacs Lisp, un dialecto o derivado de Lisp que posiblemente sea el mejor lenguaje creado.
+
++ Gestor de paquetes. Emacs posee su gestor de paquetes propio para poder descargarlos e instalarlos. A día de hoy puede que hayan más de 4000 paquetes y siguen aumentando gracias a su muy activa comunidad. 
+
++ Org-mode. Org es un modo Emacs para guardar notas, mantener listas TODO, y hacer planificación de proyectos con un rápido y efectivo sistema de texto plano. Es también un sistema de publicación y autoría, que soporta trabajar con código fuente para programación literal e investigación reproducible.
+
+ * ESS
+
+** Qué es ESS
+
+[[https://ess.r-project.org/][ESS]] (Emacs Speaks Statics) es un paquete para Emacs. Está diseñado para soportar la edición de guiones e interacción con varios programas de análisis estadísticos como son R, S-Plus, SAS, Stata y OpenBUGS/JAGS.
+
+[[./imagenes/R-emacs/R-emacs.png]]
+
+Tal como dice en la propia página web del proyecto los sistemas de análisis estadísticos son tan complejos que por buena que sea su interfaz gráfica de usuario, todo el poder de estos sistemas  solo se pueden acceder a través de scripts o guiones escritos en el lenguaje propio de cada sistema. Además los proyectos de análisis estadísticos complejos requieren un alto grado de automatización y documentación los cuales solo pueden ser creados con complejos guiones. El problema es que la mayoría de los paquetes estadísticos proporcionan solo un editor de texto no muy complejo y con pocas funcionalidades. Además cada paquete estadístico ofrece su propio editor de texto.
+
+Gracias a *ESS* podemos trabajar con distintos paquetes estadísticos siempre usando un único y unificado editor de texto que además tiene toda la potencia que nos ofrece Emacs que es el mejor editor de texto del mercado ya que además de la potencia de Emacs hay que sumar la potencia de todos los paquetes que hay para Emacs más su capacidad de ampliación gracias a Elisp.
+
+En una *Segunda Parte* haremos un tutorial más específico de cómo es trabajar con R gracias a Emacs y ESS.
+
