@@ -1,0 +1,79 @@
+#+TITLE:       Introducción a la programación literaria
+#+AUTHOR:      Patricio Martínez
+#+EMAIL:       maxxcan@disroot.org
+#+DATE:        2019-10-23 mié
+#+URI:         /blog/%y/%m/%d/introduccion-a-la-programacion-literaria
+#+KEYWORDS:    emacs, programacion-literaria
+#+TAGS:        emacs, programacion-literaria
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: Introducción a la programación literaria
+
+* Introducción
+
+Hace tiempo hice una serie de *charlas sobre programación literaria* en distintos escenarios como son en el mundo de los *Devops* y en el mundo de la *programación*. En ambas recibí ciertas *reticencias* pero sobre todo en el mundo de la programación, por algún motivo el programador prefiere sumergirse en el mundo de los algoritmos y no preocuparse demasiado de la documentación aunque eso ya sabemos que puede tener *consecuencias demoledoras* cuando los proyectos lo llevan muchas personas o se mantienen por mucho tiempo. 
+
+Cómo digo la charla para *Devops* estuvo bien y fue bien recibida y podéis volver a verla [[http://www.maxxcan.com/programacion-literaria-para-devops-con-emacs-1-parte/][aquí]]. 
+
+Las diapositivas las subiré y las compartiré desde mi [[https://github.com/maxxcan][github]]. 
+
+Pero entremos en faena y sin meternos en la *polémica* de si es algo útil o inútil para tu proyecto veremos que es la programación literaria y que cada uno *vea y experimente* si le puede ser de alguna utilidad.
+
+* Qué es la programación literaria
+
+Para resumirlo mucho diremos que la programación literaria es lo contrario de lo que se hace ahora normalmente en programación. En programación habitualmente se escribe código y entre medias, se introduce comentarios para ir explicando lo que hace cada parte del código. 
+
+A mi entender esto hace que el código en vez de ganar legibilidad lo que hace es que se hace feo, engorroso de ver y hasta confuso en ocasiones ya que se mezcla el código con la documentación a veces incluso en las mismas líneas. 
+
+La programación literaria hace justo lo contrario, invita al programador que escriba y explique bien lo que está haciendo y cómo y luego en bloques separados aunque cercanos a las explicaciones está el código que realiza lo que justo antes hemos explicado. Posteriormente luego en un proceso que explicaremos el código es "extraído" y tenemos por un lado la documentación, con código, juntos pero separados y por otro lado tenemos solo el código de programación el cual está bonito y sin engorrosos comentarios en medio el código. 
+
+Os pongo dos imágenes para que veáis la diferencia.
+
+
+_Código con comentarios_
+
+
+[[./imagenes/programacion-literaria/codigo-con-comentarios.png]]
+
+
+_Programación literaria_
+
+[[./imagenes/programacion-literaria/programacion-literaria.png]]
+
+Como dije posteriormente en un proceso "extraeremos" el código de programación para crear un archivo que solo contenga ese código. En inglés esto se llama *tangle* y me vais a perdonar de que use el término en inglés ya que aún no he encontrado ningún termino en español que define adecuadamente el proceso. Os lo resumo en un esquema:
+
+
+[[./imagenes/programacion-literaria/tanglin.png]]
+
+Para que tengáis más referencias os dejo el obligado artículo en la [[https://es.wikipedia.org/wiki/Programaci%25C3%25B3n_literaria][wikipedia]].
+
+* Programación literaria en Emacs
+
+La programación literaria no es exclusiva para Emacs, de hecho, es algo independiente pero como ya sabréis si me leéis, Emacs es en general la mejor herramienta para todo. No voy a extenderme más en ello porque sé que lo sabéis.
+
+Así que cómo funciona la programación literaria en Emacs, pues sumando una serie de herramientas que podemos usar de una manera perfectamente integrada, que son: 
+
+1. *Emacs*. Como el mejor editor del mundo
+2. *Org*. Como el mejor sistema en texto plano que también vale para todo. 
+3. *Babel*. Que es lo nos permite hacer la magia de la programación literaria 
+
+[[./imagenes/programacion-literaria/literate-programming-best-tools.png]]
+
+
+
+* Seguimos en el siguiente post 
+
+En breve, unos días, subiré un *post* donde haremos un ejemplo, pero en este caso, no será programación para que podamos entender mejor como funciona la programación literaria y cómo sacarle provecho. 
+
+
+* Unos links para hacer boca 
+
+Para los más impacientes os dejo unos enlaces para que podáis ir echándole un ojo. 
+
+
+- [[http://www.howardism.org/Technical/LP/introduction.html][Introducción a al programación literaria (inglés)]]
+
+- [[https://www-cs-faculty.stanford.edu/~knuth/lp.html][El libro del autor de la idea (inglés)]]
+
+- [[https://www.youtube.com/watch?v=vVJSn8gCh_I][Vídeo sobre programación literaria (inglés)]]
+
