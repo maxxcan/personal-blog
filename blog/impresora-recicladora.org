@@ -1,0 +1,106 @@
+#+TITLE:       Proyecto Twice3D -- Impresora Recicladora
+#+AUTHOR:      Patricio Martínez
+#+EMAIL:       maxxcan@disroot.org
+#+DATE:        2019-11-06 mié
+#+URI:         /blog/%y/%m/%d/proyecto-twice3d-impresora-recicladora
+#+KEYWORDS:    impresion3d, reciclar, proyecto
+#+TAGS:        impresora3D, reciclar, impresion3D
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: Presentación del proyecto Twice3D -- Impresora Recicladora
+
+* Introducción 
+
+La creación de este proyecto es una iniciativa para luchar contra dos grandes problemas que tenemos los makers en particular y el mundo en general. Por un lado, la gran *cantidad de plástico* que generamos, y la gran cantidad de plástico que hay en general que está poniendo en jaque a todo *nuestro planeta*. 
+
+Como está claro que el *problema del plástico* en nuestro planeta *es muy grave* y que además los que imprimimos en 3D también somos unos *grandes generadores de plástico* a causa de las muchas pruebas que hacemos y la cantidad de piezas que salen con fallos o simplemente las que hacemos por hacer, por verlas bonitas.
+
+Así como los makers somos personas que intentamos *hacer de este mundo un lugar mejor*, la idea de poder *usar plástico reciclado* para nuestras impresiones es casi *una obligación*.
+
+* El origen
+
+El origen por supuesto no es mío y la idea de reciclar plástico me vino gracias a un amigo que ha estado *viviendo en distintos países de África* por unos 10 años. Y ya hace unos años me comentó el problema de desabastecimiento de *objetos básicos*, como platos, cubiertos, etc, y en cambio el gran problema que tienen con la basura y sobre todo con el plástico, ya que allí los servicios de recogida de basuras y *reciclaje son muy deficientes*.
+
+Por supuesto, ya habían varios proyectos y el que más me interesó fue este: [[https://preciousplastic.com/en/machines.html][Plástico precioso]]
+
+[[./imagenes/recicladora-img/precious-plastic.png]]
+
+
+
+Es un proceso que en todo caso merece la pena seguir e *incluso colaborar* como Centro Makers en un futuro.
+
+Posteriormente también ví otros proyectos que me inspiraron tales como: 
+
+[[http://www.perpetualplasticproject.com/#events-2][Plástico perpétuo]]
+
+[[./imagenes/recicladora-img/perpetual-plastic.png]]
+
+
+Y finalmente el proyecto más cercano a la idea que propongo que es: 
+
+La [[https://redetec.com/][Protocycler]]
+
+[[./imagenes/recicladora-img/protocycler.png]]
+
+
+Aquí os dejo un vídeo de cómo funciona. 
+
+[[https://www.youtube.com/watch?v=PZdEhvmosko][vídeo]]
+
+
+
+Mención especial a este sitio web donde venden [[http://filamaker.eu/][pequeñas trituradoras]]
+
+[[./imagenes/recicladora-img/shredder.png]]
+
+
+
+* La idea
+
+Como ya he comentado la idea es hacer algo parecido a la *Protocycler* solo que en vez de crear una vez triturado el plástico, filamento para otras impresoras, usar ese mismo plástico triturado en una impresora especial llamada *impresora de Pellet* pero en un conjunto. 
+
+Para ello estoy convencido que lo mejor es crear una impresora con un extrusor de pellets y hay algunos muy interesantes que además son libres y posiblemente podamos modificar. 
+
+
+[[./imagenes/recicladora-img/universal-pellet-estruder.png]]
+
+
+
+
+* El proyecto
+
+Así la idea sería poder realizar un  *proyecto comunitario* por y para la comunidad de makers y además dar publicidad al *Espacio Makers en Murcia* y a sus usuarios poniendo esta impresora-recicladora como ejemplo de un trabajo realizado desde aquí y gracias a la unión de los makers de este espacio. 
+
+La impresora llevaría los colores y logos de Makers of Murcia y trabajaríamos con una *licencia libre* para que cualquier persona pueda recrearla. 
+
+
+
+
+* Diseños
+
+
+Tantos los diseños de la estructura como de las piezas necesarias serán en todo lo posible diseños que estén bajo la *licencia GPL*, con ello nos aseguramos de que se proteja nuestra autoría y de que se puedan compartir y modificar sin problemas por el resto de la comunidad. 
+
+Además trabajaremos con el programa *Freecad* ya que es el mejor programa que hay para diseño paramétrico con una licencia libre. Para ello daremos a finales de Abril un curso intensivo de *Freecad* para el que quiera asistir. Si no, siempre puedes ver los [[http://www.iearobotics.com/wiki/index.php?title=Obijuan_Academy#Tutoriales_Freecad][vídeos de Obijuan]].
+
+
+[[./imagenes/recicladora-img/freecad.png]]
+
+
+Aquí os dejo un [[https://www.youtube.com/watch?v=7iLOaL9z59k][vídeo]] de las últimas novedades. 
+
+_Por cierto, una donación de Makers of Murcia a Freecad no estaría mal._
+
+
+* Posibles colaboraciones 
+
+Una vez finalizado al menos la fase de prototipado estaría bien *asociarnos con otros proyectos* que tengan similares objetivos o al menos que se puedan compaginar. Yo por mi lado tengo cierto contacto con [[https://ayudame3d.org/][Ayudame3D]], que es una persona que hace con impresoras 3D *prótesis* para personas del tercer mundo. Que nuestros residuos plásticos terminen siendo la prótesis de alguien podría estar muy bien.
+
+[[./imagenes/recicladora-img/ayudame3d.png]]
+
+
+* Conclusión
+
+En conclusión la creación de este proyecto puede suponer una buena excusa para crear un proyecto de toda la comunidad Maker así como poner nuestro grano de arena a un problema que cada vez es más urgente poner ideas para solucionarlo.  
+
+Si quieres participar con nosotros, estés donde estés siempre puedes visitar la página web de [[https://makersofmurcia.org/][Makers of Murcia]] y unirte a su [[https://t.me/makersofmurcia][grupo de Telegram]]
